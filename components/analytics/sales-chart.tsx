@@ -2,7 +2,12 @@
 
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts"
 
-export function SalesChart({ data }: { data: any[] }) {
+interface SalesData {
+  month: string;
+  revenue: number;
+}
+
+export function SalesChart({ data }: { data: SalesData[] }) {
   return (
     <ResponsiveContainer width="100%" height={350}>
       <BarChart data={data}>

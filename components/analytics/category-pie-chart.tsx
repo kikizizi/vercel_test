@@ -10,7 +10,12 @@ const COLORS = [
   'hsl(var(--chart-5))'
 ]
 
-export function CategoryPieChart({ data }: { data: any[] }) {
+interface CategoryData {
+  name: string;
+  sales: number;
+}
+
+export function CategoryPieChart({ data }: { data: CategoryData[] }) {
   return (
     <ResponsiveContainer width="100%" height={350}>
       <PieChart>
